@@ -2,9 +2,10 @@
     <h1>Bollywood Movie Picker!</h1>
 </header>
 
-<p>
-    {{name}},{{year}}
-</p>
+<div>
+    <p> Movie: {{name}},{{year}}</p>
+    <button onclick="window.location.reload()">Refresh Movie</button>
+</div>
 
 <p>
     <b>Happy guessing!</b>
@@ -12,8 +13,8 @@
 
 
 <footer>
-    Reference from list: <a href="{{url}}" target="_blank">imdb filtered list</a>
-    Code reference: <a href="https://github.com/mihirkurdekar/bollywood-movie-picker/blob/master/Bollywood_Dumb_Charades.ipynb"></a>
+    <p>Reference from list: <a href="{{url}}" target="_blank">imdb filtered list</a></p>
+    <p>Code reference: <a target="_blank" href="https://github.com/mihirkurdekar/bollywood-movie-picker/blob/master/Bollywood_Dumb_Charades.ipynb">Mihir's Jupyter Notebook</a></p>
 </footer>
 
 
