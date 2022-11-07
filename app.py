@@ -20,7 +20,7 @@ url = 'https://www.imdb.com/search/title/?title_type=feature&countries=in&langua
 def hello_world():  # put application's code here
     #return 'Hello World!'
     movie = movies.sample()
-    print(str(movie['Name']))
+    #print(str(movie['Name']))
     return template.render(url= str(url),name= movie['Name'].values[0],year= movie['Year'].values[0])
 
 @app.route('/refresh-list')
