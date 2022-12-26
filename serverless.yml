@@ -14,9 +14,24 @@ custom:
   wsgi:
     app: app.app
     packRequirements: false
+#  pythonRequirements:
+#    dockerizePip: true
+#    layer: true
+  package:
+    patterns:
+      - 'templates/**'
+      - 'static/**'
+      - 'app.py'
+
 functions:
   app:
     handler: wsgi.handler
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
+    layers:
+#      - { Ref: PythonRequirementsLambdaLayer }
+       - arn:aws:lambda:us-east-1:336392948345:layer:AWSSDKPandas-Python39:2
+
+
+
