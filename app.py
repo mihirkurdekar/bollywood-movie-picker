@@ -41,7 +41,7 @@ def hello_world():
     </body>
     <footer class='container'>
         <p>Reference from list: <a href='https://www.imdb.com/search/title/?title_type=feature&languages=hi' target='_blank'>imdb filtered list</a></p>
-        <p>Code reference: <a target='_blank' href='https://github.com/mihirkurdekar/bollywood-movie-picker/blob/master/Bollywood_Dumb_Charades.ipynb'>Mihir's Jupyter Notebook</a></p>
+        <p>Code reference: <a target='_blank' href='https://github.com/mihirkurdekar/bollywood-movie-picker/blob/master/notebooks'>Mihir's Jupyter Notebook</a></p>
     </footer>
     </html>
     """
