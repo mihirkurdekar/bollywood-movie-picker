@@ -7,7 +7,7 @@ environment = Environment(loader=FileSystemLoader("templates/"))
 template = environment.get_template("movie_view.html")
 
 global movies
-movies = pd.read_csv('./static/movies.csv')
+movies = pd.read_csv('static/movies.csv')
 
 url = 'https://www.imdb.com/search/title/?title_type=feature&countries=in&languages=hi&view=simple&ref_=adv_prv'
 
