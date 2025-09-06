@@ -7,7 +7,7 @@ environment = Environment(loader=FileSystemLoader("templates/"))
 template = environment.get_template("movie_view.html")
 
 # Load movies from parquet file
-movies = pd.read_parquet('static/bollywood_movies.parquet')
+movies = pd.read_csv('static/movies_parquet.csv.gz',compression='gzip')
 
 @app.route('/')
 def hello_world():
