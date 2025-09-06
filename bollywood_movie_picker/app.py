@@ -6,18 +6,16 @@ app = Flask(__name__)
 environment = Environment(loader=FileSystemLoader("templates/"))
 template = environment.get_template("movie_view.html")
 
-global movies
-movies = pd.read_csv('static/movies.csv')
-
-url = 'https://www.imdb.com/search/title/?title_type=feature&countries=in&languages=hi&view=simple&ref_=adv_prv'
+# Load movies from parquet file
+movies = pd.read_parquet('static/bollywood_movies.parquet')
 
 @app.route('/')
-def hello_world():  # put application's code here
+def hello_world():
     movie = movies.sample()
-    #print(str(movie['Name']))
-    return template.render(url= str(url),name= movie['Name'].values[0],year= movie['Year'].values[0])
+    title = movie['title'].values[0]
+    title_id = movie['titleId'].values[0]
+    imdb_url = f"https://www.imdb.com/title/{title_id}/"
+    return template.render(imdb_url=imdb_url, name=title)
 
 if __name__ == '__main__':
     app.run()
-
-

@@ -15,7 +15,7 @@
 <body>
 
 <div class="container">
-    <p> Movie: {{ name }},{{ year }}</p>
+    <p> Movie: <a href="{{ imdb_url }}" target="_blank">{{ name }}</a></p>
     <button onclick="window.location.reload()">Refresh Movie</button>
 </div>
 
@@ -32,5 +32,3 @@
         Jupyter Notebook</a></p>
 </footer>
 </html>
-
-

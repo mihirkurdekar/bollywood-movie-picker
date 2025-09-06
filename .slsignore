@@ -1,0 +1,7 @@
+*
+!bollywood_movie_picker/**
+!pyproject.toml
+!package.json
+.venv/
+node_modules/
+.git/
