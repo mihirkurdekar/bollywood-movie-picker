@@ -10,13 +10,12 @@ packages = [{include = "bollywood_movie_picker"}]
 poetry-plugin-export = ">=1.8"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 flask = "^3.0.3"
-jinja2 = "^3.1.4"
 # all dependencies below to be commented while serverless deploy
-pandas = "^2.2.2"
-beautifulsoup4 = "^4.12.3"
-requests = "^2.32.3"
+#pandas = "^2.2.2"
+#beautifulsoup4 = "^4.12.3"
+#requests = "^2.32.3"
 
 
 [build-system]
