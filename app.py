@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 # Load movies from compressed CSV file
 def load_movies():
-    return pd.read_csv('static/movies_parquet.csv.gz', compression='gzip')
+    #return pd.read_csv('static/movies_parquet.csv.gz', compression='gzip')
+    return pd.read_parquet('static/bollywood_movies.parquet')
 
 movies = load_movies()
 
